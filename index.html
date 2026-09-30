@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-danger d-flex flex-column vh-100 space-mono-regular">
+    <div class="d-flex flex-row mt-4 ms-4">
+        <div class="camara"></div>
+        <div class="circulito bg-danger ms-3"></div>
+        <div class="circulito bg-warning"></div>
+        <div class="circulito bg-success"></div>
+    </div>
+    <svg viewBox="0 0 700 80" width="100%" height="25vh">
+    <!-- Lógica del trazo de la línea -->
+        <path 
+        d="M 0 40 L 160 40 C 180 40, 190 15, 210 15 L 800 15" 
+        stroke="#111827" 
+        stroke-width="7" 
+        fill="none" 
+        stroke-linecap="round"
+        />
+    </svg>
+    <div class="parte-abajo container-fluid row g-0 flex-grow-1">
+        <div class="lado-izquierdo col-6 d-flex  justify-content-center">
+            <div class="borde-ventana d-flex  justify-content-center">
+            <!-- este es el cuadrado gris que contendra la pantalla -->
+                <div class="ventana">
+                    <!-- esta es la ventana -->
+                </div>
+            </div>
+        </div>
+        <div class="lado-derecho col-6 d-flex flex-column">
+            <div class="pantalla mt-4 ">
+                <!-- aqui se veran los datos del pokemon -->
+            </div>
+            <div class="botones-numericos d-flex flex-row flex-wrap mt-3">
+                <div class="num" style="border-top-left-radius: 8px;">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num" style="border-top-right-radius: 8px;">5</div>
+                <div class="num" style="border-bottom-left-radius: 8px;">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num" style="border-bottom-right-radius: 8px;">0</div>
+                <div class="botones-control d-flex flex-row justify-content-end">
+                    <div class="boton-borrar">Borrar</div>
+                    <div class="boton-aceptar">Aceptar</div>
+                </div>
+            </div>
+            <div class="botones-nav d-flex flex-row">
+                <!-- boton para avanzar y retroceder -->
+                    <div class="boton-retroceder">-</div>
+                    <div class="boton-avanzar">+</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@import url("./node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+:root {
+    --color-negro: #000000;
+    --color-azul: #428af5;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.camara{
+    border-radius: 40px;
+    background-color: cornflowerblue;
+    border: solid white 5px;
+    width: 80px; 
+    height: 80px;
+}
+
+.circulito{
+    border-radius: 40px;
+    border: solid var(--color-negro) 1px;
+    width: 20px; 
+    height: 20px;
+    display: flex;
+    margin-right: 6px;
+}
+.parte-abajo{
+
+}
+.lado-izquierdo{
+    align-items: center;
+    border-top: solid #be0808 6px;
+}
+.lado-derecho{
+    border-top: solid #be0808 6px;
+    border-left: solid #be0808 6px;
+    align-items: center;
+}
+.borde-ventana{
+    background-color: azure;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    border-radius: 14px;
+    border: solid var(--color-negro) 1px;
+}
+.ventana{
+    background-color: var(--color-negro);
+    width: 80%;
+    height: 80%;
+}
+.pantalla{
+    background-color: var(--color-negro);
+    width: 80%;
+    height: 60%;
+    border: solid #be0808 2px;
+    border-radius: 10px;
+}
+.botones-numericos{
+    width: 80%;
+    height: 20%;
+}
+.num{
+    width: 20%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-azul);
+    border: solid black 1px;
+    color: white;
+}
+.botones-control{
+    height: 20%;
+    width: 100%;
+    padding: 4px;
+    color: white;
+    font-size: x-small;
+}
+.boton-borrar{
+    background-color: var(--color-negro);
+    width: 150px;
+    margin-right: 2px;
+    border-radius: 20px;
+    text-align: center;
+}
+.boton-aceptar{
+    background-color: var(--color-negro);
+    width: 150px;
+    border-radius: 20px;
+    text-align: center;
+}
+.botones-nav{
+    width: 80%;
+    height: 8%;
+}
+.boton-retroceder{
+    background-color: white;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: solid black 1px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.boton-avanzar{
+    display: flex;
+    background-color: white;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+    font-size: 24px;
+    font-weight: bold;
+}
