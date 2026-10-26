@@ -29,39 +29,131 @@
     </svg>
     <div class="parte-abajo container-fluid row g-0 flex-grow-1">
         <div class="lado-izquierdo col-6 d-flex  justify-content-center">
-            <div class="borde-ventana d-flex  justify-content-center">
+            <div class="borde-ventana d-flex flex-column">
+                <div class="circulosArriba d-flex">
+                    <div class="circulo"></div>
+                    <div class="circulo"></div>
+                </div>
             <!-- este es el cuadrado gris que contendra la pantalla -->
                 <div class="ventana">
-                    <!-- esta es la ventana -->
+                    <img class="imagenPokemon">
+                </div>
+                <div class="circuloAbajo container">
+                    <div class="boton-inicio"></div>
                 </div>
             </div>
         </div>
         <div class="lado-derecho col-6 d-flex flex-column">
-            <div class="pantalla mt-4 ">
-                <!-- aqui se veran los datos del pokemon -->
-            </div>
-            <div class="botones-numericos d-flex flex-row flex-wrap mt-3">
-                <div class="num" style="border-top-left-radius: 8px;">1</div>
-                <div class="num">2</div>
-                <div class="num">3</div>
-                <div class="num">4</div>
-                <div class="num" style="border-top-right-radius: 8px;">5</div>
-                <div class="num" style="border-bottom-left-radius: 8px;">6</div>
-                <div class="num">7</div>
-                <div class="num">8</div>
-                <div class="num">9</div>
-                <div class="num" style="border-bottom-right-radius: 8px;">0</div>
-                <div class="botones-control d-flex flex-row justify-content-end">
-                    <div class="boton-borrar">Borrar</div>
-                    <div class="boton-aceptar">Aceptar</div>
+            <div class="pantalla mt-4 p-2">
+            <!-- 1. BARRA SUPERIOR DE ENTRADA / BÚSQUEDA -->
+                <div class="search-bar-lcd">
+                    <div class="lcd-label">ENTRADA ID:</div>
+                    <div class="lcd-display">
+                        <span class="lcd-prefix"></span>
+                        <span id="lcd-input-value"></span>
+                        <span class="lcd-cursor">_</span>
+                    </div>
+                    <button type="button" class="lcd-btn-clear">CLR</button>
+                    <button type="button" class="lcd-btn-search">BUSCAR</button>
+                </div>
+
+                <!-- 2. ENCABEZADO PRINCIPAL (ID + NOMBRE + TIPO) -->
+                <div class="pokedex-header">
+                    <div class="pokemon-title">
+                        <span id="pokemon-id-display" class="id-number"></span>
+                        <span id="pokemon-name-display" class="name-text"></span>
+                    </div>
+                    <div id="pokemon-types-container" class="types-wrapper"></div>
+                </div>
+
+                <!-- 3. DETALLES FÍSICOS (ESPECIE / ALTURA / PESO) -->
+                <div class="info-card">
+                    <div class="info-item">
+                        <span class="info-label">ESPECIE</span>
+                        <span id="info-especie" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">ALTURA</span>
+                        <span id="info-altura" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">PESO</span>
+                        <span id="info-peso" class="info-value"></span>
+                    </div>
+                </div>
+
+                <!-- 4. REGISTRO / DESCRIPCIÓN -->
+                <div class="description-card">
+                    <div class="desc-header">
+                        <span class="desc-icon">▤</span> REGISTRO OFICIAL:
+                    </div>
+                    <p id="info-descripcion" class="desc-text">
+                        
+                    </p>
+                </div>
+
+                <!-- 5. BARRAS DE ESTADÍSTICAS -->
+                <div class="stats-container">
+                    <!-- HP -->
+                    <div class="stat-row">
+                        <span class="stat-label">PS</span>
+                        <div class="stat-bar" id="bar-hp"></div>
+                        <span class="stat-value" id="val-hp"></span>
+                    </div>
+
+                    <!-- ATAQUE -->
+                    <div class="stat-row">
+                        <span class="stat-label">Atq</span>
+                        <div class="stat-bar" id="bar-atk"></div>
+                        <span class="stat-value" id="val-atk"></span>
+                    </div>
+                    <!-- DEFENSA -->
+                    <div class="stat-row">
+                        <span class="stat-label">Def</span>
+                        <div class="stat-bar" id="bar-def"></div>
+                        <span class="stat-value" id="val-def"></span>
+                    </div>
+                    <!-- Ataque Especial -->
+                    <div class="stat-row">
+                        <span class="stat-label">AtqEsp</span>
+                        <div class="stat-bar" id="bar-atkS"></div>
+                        <span class="stat-value" id="val-atkS"></span>
+                    </div>
+                    <!-- Defensa Especial -->
+                    <div class="stat-row">
+                        <span class="stat-label">DefEsp</span>
+                        <div class="stat-bar" id="bar-defS"></div>
+                        <span class="stat-value" id="val-defS"></span>
+                    </div>
+                    <!-- VELOCIDAD -->
+                    <div class="stat-row">
+                        <span class="stat-label">Vel</span>
+                        <div class="stat-bar" id="bar-spd"></div>
+                        <span class="stat-value" id="val-spd"></span>
+                    </div>
                 </div>
             </div>
-            <div class="botones-nav d-flex flex-row">
+            <div class="botones-numericos d-flex flex-row flex-wrap mt-3">
+                <button class="num" data-value="1" style="border-top-left-radius: 8px;">1</button>
+                <button class="num" data-value="2">2</button>
+                <button class="num" data-value="3">3</button>
+                <button class="num" data-value="4">4</button>
+                <button class="num" data-value="5" style="border-top-right-radius: 8px;">5</button>
+                <button class="num" data-value="6" style="border-bottom-left-radius: 8px;">6</button>
+                <button class="num" data-value="7">7</button>
+                <button class="num" data-value="8">8</button>
+                <button class="num" data-value="9">9</button>
+                <button class="num" data-value="0" style="border-bottom-right-radius: 8px;">0</button>
+            </div>
+            <div class="botones-nav d-flex flex-row mt-3">
                 <!-- boton para avanzar y retroceder -->
                     <div class="boton-retroceder">-</div>
                     <div class="boton-avanzar">+</div>
             </div>
         </div>
+    
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
